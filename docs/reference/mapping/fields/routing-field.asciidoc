@@ -132,7 +132,8 @@ That is, the `_routing` field is used to calculate a set of shards within the in
 `_id` is used to pick a shard within that set.
 
 To enable this feature, the `index.routing_partition_size` should have a value greater than 1 and
-less than `index.number_of_shards`.
+less than `index.number_of_shards` and
+'index.number_of_routing_shards' should have a value equal or less than 'index.number_of_shards'.
 
 Once enabled, the partitioned index will have the following limitations:
 
